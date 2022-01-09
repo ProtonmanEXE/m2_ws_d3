@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmins:th="https://www.thymeleaf.org/">
+<!-- Task 4 -->
+
+<style>    
+    p {
+        font-size: 25px;
+    }
+
+    .em {
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+</style>
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Your Particulars</title>
+</head>
+
+<body th:object="${yourcontact}">
+    <br>
+    <p>
+        Name: <span class="em" th:text="${yourcontact.name}"></span>
+    </p>
+    <p>
+        Handphone Number: <span class="em" th:text="${yourcontact.phoneNo}"></span>
+    </p>
+    <p>
+        Email Address: <span class="em" th:text="${yourcontact.email}"></span>
+    </p>
+</body>
+</html>

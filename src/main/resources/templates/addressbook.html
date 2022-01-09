@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmins:th="https://www.thymeleaf.org/">
+<!-- Task 2 -->
+
+<style>    
+    .input {
+        margin-left: 280px;
+    }
+</style>
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Address Book</title>
+</head>
+
+<body>   
+    <h1>Please key in your particulars:</h1>
+
+    <form 
+        action="#"
+        th:action="@{/contact}"
+        th:object="${addressbookobj}" 
+        method="post"
+    >
+    <!-- th:action="@{/<String>} binds to the post path -->
+    <!-- th:object="${/<String>}" binds to the object (a) in NumController.java -->
+
+    <br>
+    <p>
+        Name:
+        <input type="text" th:field="*{name}" required pattern=".*\S+.*" title="This field is required" size="40">
+    </p>
+    <p>
+        Handphone Number:
+        <input type="text" th:field="*{phoneNo}" required pattern="[0-9]{8,}" title="Phone number must be at least 8 digits">
+    </p>
+    <p>
+        Email Address:
+        <input type="text" th:field="*{email}" required pattern=".*\S+.*" title="This field is required" size="60">
+    </p>
+
+    <br>
+    <p>
+        <input class="input" type="submit" value="Save"/>
+    </p>
+</body>
+</html>
