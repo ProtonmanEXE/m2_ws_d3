@@ -28,10 +28,10 @@ class ContactHandlerTest {
         
         // test
         handler.saveContact(c, model, appArgs);
-        String id = c.getId();
-        File userFile = new File("C:\\db\\m2wsd3", id + ".txt");
-        // assertTrue(userFile.exists());
-        System.out.println("Test was a success!");
+        // // String id = c.getId();
+        // File userFile = new File("C:\\db\\m2wsd3", id + ".txt");
+        // // assertTrue(userFile.exists());
+        // System.out.println("Test was a success!");
     }
 
 }

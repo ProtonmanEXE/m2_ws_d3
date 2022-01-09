@@ -57,7 +57,6 @@ public class ContactHandler {
             }
         } 
         logging.info("id > " +id);
-        c.setId(id);
 
         // Task 3b - create save file
         String contactFileName = id + ".txt";
